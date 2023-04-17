@@ -1,0 +1,7 @@
+{
+  "serverPort": 5000,
+  "dbUrl": "mongodb+srv://errollgarner:Spamerspidors1@cloud.vdninms.mongodb.net/cloud?retryWrites=true&w=majority",
+  "secretKey": "store-secret-key",
+  "filePath": "D:\\WORK_PLACE\\FULL-STACK\\MERN cloud storage\\server\\files",
+  "staticPath": "D:\\WORK_PLACE\\FULL-STACK\\MERN cloud storage\\server\\static"
+}
