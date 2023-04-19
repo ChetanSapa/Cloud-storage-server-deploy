@@ -19,17 +19,17 @@ app.use(express.json())
 app.use(express.static('static'))
 app.use('/api/auth', authRouter)
 app.use('/api/files', fileRouter)
-
-mongoose.set("strictQuery", false);
 const start = async () => {
     try {
+        mongoose.set("strictQuery", false);
         await mongoose.connect(config.get("dbUrl"))
 
         app.listen(PORT, ()=>{
             console.log('Server started on port ', PORT)
         })
     } catch (e) {
-
+        console.error(e.message);
+        process.exit(1);
     }
 }
 
