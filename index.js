@@ -20,6 +20,7 @@ app.use(express.static('static'))
 app.use('/api/auth', authRouter)
 app.use('/api/files', fileRouter)
 
+mongoose.set("strictQuery", false);
 const start = async () => {
     try {
         await mongoose.connect(config.get("dbUrl"))
